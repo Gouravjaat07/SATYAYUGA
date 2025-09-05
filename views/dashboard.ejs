@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SATYAYUGA Dashboard</title>
+  <link href="/dashboard.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>SATYAYUGA</h2>
+    <a href="/profile">Profile</a>
+    <a href="/satyayuga">Upload</a>
+    <a href="#">Reports</a>
+    <a href="/profile">Settings</a>
+    <a href="/">Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="topbar">
+      <h1>Dashboard</h1>
+      <div class="user-info">Welcome, Gourav</div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats">
+      <div class="card">
+        <h3>Credibility Score</h3>
+        <p>92%</p>
+      </div>
+      <div class="card">
+        <h3>Detections</h3>
+        <p>47 Verified</p>
+      </div>
+      <div class="card">
+        <h3>Reports Filed</h3>
+        <p>12 Flags</p>
+      </div>
+      <div class="card">
+        <h3>Last Scan</h3>
+        <p>2 hours ago</p>
+      </div>
+    </div>
+
+    <!-- Activity Table -->
+    <div class="activity">
+      <h2>Recent Activity</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Result</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>04 Sep 2025</td>
+            <td>Video</td>
+            <td>Fake</td>
+            <td>98%</td>
+          </tr>
+          <tr>
+            <td>03 Sep 2025</td>
+            <td>Image</td>
+            <td>Real</td>
+            <td>87%</td>
+          </tr>
+          <tr>
+            <td>02 Sep 2025</td>
+            <td>Text</td>
+            <td>Misleading</td>
+            <td>76%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Scroll Animation -->
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>

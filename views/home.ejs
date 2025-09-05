@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SATYAYUGA | Truth Verified</title>
+  <link href="/home.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <h1>SATYAYUGA</h1>
+    <button onclick="location.href='signup.html'">Join Now</button>
+    <form method="GET" action="/login">
+       <button>Dashboard</button>
+    </form>
+   
+    <form method="GET" action="/login">
+      <button>Login</button>
+    </form>
+    <form method="GET" action="/signup">
+      <button>Signup</button>
+    </form>
+    <form method="GET" action="/login">
+      <button>Profile</button>
+    </form>
+  </nav>
+
+  <section class="hero">
+    <h2>Truth Verified</h2>
+    <p>AI-powered detection across text, images, and video. Reclaim trust in the digital world with SATYAYUGA.</p>
+    <form method="GET" action="/login">
+      <button onclick="location.href='login.html'">Get Started</button>
+    </form>
+    
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h3>🧠 Multi-Modal AI</h3>
+      <p>Detect deepfakes using BERT, VIT, and XceptionNet across formats.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Real-Time Verification</h3>
+      <p>Instant fact-checking via trusted APIs like Google FactCheck and PolitiFact.</p>
+    </div>
+    <div class="card">
+      <h3>🔍 Explainable AI</h3>
+      <p>Confidence scores and transparent logic for every detection.</p>
+    </div>
+    <div class="card">
+      <h3>📊 Dashboard Insights</h3>
+      <p>Visualize credibility trends, alerts, and detection history in real time.</p>
+    </div>
+    <div class="card">
+      <h3>🤝 Community + AI</h3>
+      <p>Combines human reports with AI to reduce false positives and improve accuracy.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 SATYAYUGA. Built with integrity by Team Sankalp.
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>

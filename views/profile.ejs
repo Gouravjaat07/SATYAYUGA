@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile | SATYAYUGA</title>
+  <link href="/profile.css" rel="stylesheet">
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <div class="avatar">G</div>
+      <div class="profile-info">
+        <h2>Gourav</h2>
+        <p>Email: gourav@example.com</p>
+        <p>Username: Gourav</p>
+      </div>
+    </div>
+    
+    <div class="stats">
+      <div class="stat-card">
+        <h3>Credibility Score</h3>
+        <p>92%</p>
+      </div>
+      <div class="stat-card">
+        <h3>Detections</h3>
+        <p>47 Verified</p>
+      </div>
+      <div class="stat-card">
+        <h3>Reports Filed</h3>
+        <p>12 Community Flags</p>
+      </div>
+    </div>
+
+    <div class="edit-section">
+      <h3>Edit Profile</h3>
+      <form id="editForm" method="GET" action="/dashboard">
+        <div class="form-group">
+          <label for="editName">Full Name</label>
+          <input type="text" id="editName" value="Gourav" />
+        </div>
+        <div class="form-group">
+          <label for="editEmail">Email</label>
+          <input type="email" id="editEmail" value="gourav@example.com" />
+        </div>
+        <div class="form-group">
+          <label for="editUsername">Username</label>
+          <input type="text" id="editUsername" value="Unknown007" />
+        </div>
+        <button type="submit" class="save-btn">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- <script>
+    const form = document.getElementById('editForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Profile updated successfully!');
+    });
+  </script> -->
+</body>
+</html>

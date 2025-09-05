@@ -1,0 +1,113 @@
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #0f172a, #000);
+    color: #e2e8f0;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #1e293b;
+    padding: 30px 20px;
+    border-right: 1px solid #334155;
+}
+.sidebar h2 {
+    color: #38bdf8;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+.sidebar a {
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.sidebar a:hover {
+    color: #38bdf8;
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    padding: 40px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.topbar h1 {
+    font-size: 2rem;
+    color: #38bdf8;
+}
+.user-info {
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #334155;
+    text-align: center;
+    transition: transform 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+.activity {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+}
+.activity h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #334155;
+    color: #cbd5e1;
+}
+th {
+    color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+    .sidebar { display: none; }
+    .main { padding: 20px; }
+}

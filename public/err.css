@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top left, #0f172a, #000);
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.glitch {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #38bdf8;
+    position: relative;
+    animation: glitch 1s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+    content: '404';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    color: #0ea5e9;
+    overflow: hidden;
+}
+
+.glitch::before {
+    top: -2px;
+    animation: glitchTop 1s infinite;
+}
+
+.glitch::after {
+    top: 2px;
+    animation: glitchBottom 1s infinite;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #94a3b8;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+button {
+    margin-top: 30px;
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    background-color: #0ea5e9;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-1px, 1px); }
+    80% { transform: translate(1px, -1px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes glitchTop {
+    0% { clip-path: inset(0 0 80% 0); }
+    50% { clip-path: inset(0 0 20% 0); }
+    100% { clip-path: inset(0 0 80% 0); }
+}
+
+@keyframes glitchBottom {
+    0% { clip-path: inset(80% 0 0 0); }
+    50% { clip-path: inset(20% 0 0 0); }
+    100% { clip-path: inset(80% 0 0 0); }
+}
